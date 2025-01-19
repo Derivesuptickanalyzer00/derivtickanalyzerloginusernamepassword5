@@ -93,6 +93,20 @@
     </div>
 
     <script>
+        // List of valid users and passwords
+        const users = [
+            { username: 'mahindaliyanage44@gmail.com', password: 'FA87023@#ap' },
+            { username: 'Kuma', password: '1998' },
+            { username: 'chamaramadushan172@gmail.com', password: 'GF546@$qHj' },
+            { username: 'user4', password: 'pass4' },
+            { username: 'user5', password: 'pass5' },
+            { username: 'user6', password: 'pass6' },
+            { username: 'user7', password: 'pass7' },
+            { username: 'user8', password: 'pass8' },
+            { username: 'user9', password: 'pass9' },
+            { username: 'user10', password: 'pass10' }
+        ];
+
         function validateLogin(event) {
             event.preventDefault();
 
@@ -100,8 +114,11 @@
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('error-message');
 
-            if (username === 'chamaramadushan172@gmail.com' && password === 'GF546@$qHj') {
-                window.location.href = 'https://derivtickanalyzerhomepages.site/'; // Replace with your desired URL
+            // Check if the entered username and password match any in the list
+            const validUser = users.find(user => user.username === username && user.password === password);
+
+            if (validUser) {
+                window.location.href = 'https://derivesuptickanalyzer00.github.io/logout-with-pages/'; // Replace with your desired URL
             } else {
                 errorMessage.style.display = 'block';
             }
